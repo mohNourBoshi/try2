@@ -18,5 +18,15 @@
       "expiry_date": 1703181318082
     },
     "lastRefreshed": "2023-12-21T16:55:19.082Z"
+  },
+  "fawzi.test4nour": {
+    "tokens": {
+      "access_token": "ya29.a0AfB_byC1TqmjeJkjqY67i2N2Gt7NRk-rutTaH8a7FncVolKC3w-Bsy89rQ4bCSyDZu6SMXg1V1uNqRMVnNG3EvYNDz4QgYbp8ECHZfd8UQGH_cqRiy3JMkMJlO_lyjb-QCM0YIwSvi6_cXA1HUpMphcsyYy0nHD_ssE3aCgYKAWASARESFQHGX2MitMk0Iu6Cca75dyp6ysJvkw0171",
+      "refresh_token": "1//0eN1AOuG15FpYCgYIARAAGA4SNwF-L9Ir4KwOM89oPo_sLfT-3V65cTWxGNrVMHy8xo7ZrwpRM0wwlhPoML4-8qa76Z_BtSUtRFg",
+      "scope": "https://www.googleapis.com/auth/gmail.readonly",
+      "token_type": "Bearer",
+      "expiry_date": 1703189255710
+    },
+    "lastRefreshed": "2023-12-21T19:07:36.711Z"
   }
 }
