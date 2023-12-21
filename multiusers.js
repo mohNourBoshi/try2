@@ -1,9 +1,12 @@
 const express = require('express');
 const { google } = require('googleapis');
 const { OAuth2Client } = require('google-auth-library');
-const { htmlToText } = require('html-to-text');
+// const { htmlToText } = require('html-to-text');
+const cors = require('cors');
+
 
 const app = express();
+app.use(cors());
 const port = 3000;
 
 const credentials = require('./credentials.json');
