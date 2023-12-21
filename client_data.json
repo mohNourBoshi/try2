@@ -9,7 +9,6 @@
     },
     "lastRefreshed": "2023-12-21T19:07:36.711Z"
   },
-<<<<<<< HEAD
   "ramiko9639632": {
     "tokens": {
       "access_token": "ya29.a0AfB_byAWh-9OYlPf0s3g77EFbXc0RkKryf9oBTAXGhv0GtPOssLBgFit3DOJVcN_Udw33lqaLbniPEEvJcScgpuDojR0_O6EkRgFeA0o2eDsf3agCwiKOz9KTOi8zGBvRXFa9CaMVDCSKyPKsVEmTabRHhiUFOzbPQaCgYKARwSARESFQHGX2Mi6-yaTg1ywwI2YlZ8S7c6GA0169",
@@ -37,24 +36,5 @@
       "expiry_date": 1703197563383
     },
     "lastRefreshed": "2023-12-21T21:26:04.385Z"
-=======
-  "ramiko963963": {
-    "tokens": {
-      "access_token": "ya29.a0AfB_byCUhDkp2F5hwm5xMlNTt5pXMRvqMSh6V4jGbUmznL7fAZDh0gTuepc8Yl6jYOLyjXhB9D-QiR8_XbC8tb_aLqFx06mcRlpJmp_jFOnY7efxZWV9485NgTcdlO14BE-DX42KJmzZ0bNIiXNemnPCeabW-Ie4QAaCgYKARYSARESFQHGX2Mi5a4ZGc9F2UHvqHqp3Vc4cw0169",
-      "scope": "https://www.googleapis.com/auth/gmail.readonly",
-      "token_type": "Bearer",
-      "expiry_date": 1703196639702
-    },
-    "lastRefreshed": "2023-12-21T21:10:40.702Z"
-  },
-  "ramiko9639632": {
-    "tokens": {
-      "access_token": "ya29.a0AfB_byDndEi3SBus0gHuDYjgjY1AA0u3dQuaDxD--YZGdmwb3d8Y6x0WMhMonzpS-W68IbtUPjbqqQMYdKsgARQi5aeDHXW5wVhXnz03oIn_PJ9aDsb-RuPx4a9Ot-pPAcaCivPn12hIX-qzdalnjz5KTxzB3FYWQQaCgYKAT4SARESFQHGX2Mi3tA3Gfes9UqUezZbNTg7hA0169",
-      "scope": "https://www.googleapis.com/auth/gmail.readonly",
-      "token_type": "Bearer",
-      "expiry_date": 1703196622823
-    },
-    "lastRefreshed": "2023-12-21T21:10:23.824Z"
->>>>>>> 6ac4009c8b78729bce95a4b5fee5464720fe7965
   }
 }
