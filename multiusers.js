@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
   res.send('<h1>Welcome to the Gmail API Client Management</h1>');
 });
 
-app.get('/authorize/:clientId', (req, res) => {
+app.get('/auth/:clientId', (req, res) => {
   const clientId = req.params.clientId;
   const authUrl = generateAuthUrl(clientId);
   res.redirect(authUrl);
