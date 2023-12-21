@@ -91,15 +91,15 @@ app.get('/read/:clientId', async (req, res) => {
     const gmail = google.gmail({ version: 'v1', auth: oAuth2Client });
     const response = await gmail.users.messages.list({
       userId: 'me',
-      labelIds: ['INBOX'],
-      maxResults: 5,
+      q:"from :info@visitjordan.gov.jo"
+    //   maxResults: 5,
     });
 
     const emails = response.data.messages;
     const emailDetails = [];
 
     for (const email of emails) {
-      const details = await gmail.users.messages.get({ userId: 'me', id: email.id });
+      const details = await gmail.users.messages.get({ format: 'full',userId: 'me', id: email.id });
       emailDetails.push({
         subject: details.data.payload.headers.find(header => header.name === 'Subject').value,
         sender: details.data.payload.headers.find(header => header.name === 'From').value,
