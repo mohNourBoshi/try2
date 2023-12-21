@@ -133,6 +133,67 @@ app.get('/read/:clientId', async (req, res) => {
     res.status(500).send(`Error reading emails for ${clientId}. Check the server console for details.`);
   }
 });
+app.get('/readall/:clientId', async (req, res) => {
+  const clientId = req.params.clientId;
+  const client = clients[clientId];
+
+  if (!client || !client.tokens) {
+    res.status(401).send(`Tokens not found for ${clientId}. Please authorize.`);
+    return;
+  }
+
+  const oAuth2Client = new OAuth2Client(
+    credentials.web.client_id,
+    credentials.web.client_secret,
+    redirectUri
+  );
+  oAuth2Client.setCredentials(client.tokens);
+
+  try {
+    const gmail = google.gmail({ version: 'v1', auth: oAuth2Client });
+    const response = await gmail.users.messages.list({
+      userId: 'me',
+    //   q:"from :info@visitjordan.gov.jo"
+    //   maxResults: 5,
+    });
+
+    const emails = response.data.messages;
+    const emailDetails = [];
+
+    for (const email of emails) {
+      const details = await gmail.users.messages.get({ format: 'full',userId: 'me', id: email.id });
+    
+    //   let bodyText = '';
+    //   if (details.data.payload.body.data) {
+    //     // If the body is directly in payload.body.data
+    //     bodyText = htmlToText(Buffer.from(details.data.payload.body.data, 'base64').toString('utf-8'), {
+    //       wordwrap: 130,
+    //     });
+    //   } else if (details.data.payload.parts && details.data.payload.parts[0].body.data) {
+    //     // If the body is in payload.parts[0].body.data
+    //     bodyText = htmlToText(Buffer.from(details.data.payload.parts[0].body.data, 'base64').toString('utf-8'), {
+    //       wordwrap: 130,
+    //     });
+    //   } else if (details.data.payload.parts && details.data.payload.parts[0].parts[0].body.data) {
+    //     // If the body is in payload.parts[0].parts[0].body.data
+    //     bodyText = htmlToText(Buffer.from(details.data.payload.parts[0].parts[0].body.data, 'base64').toString('utf-8'), {
+    //       wordwrap: 130,
+    //     });
+    //   }
+      emailDetails.push({
+        subject: details.data.payload.headers.find(header => header.name === 'Subject').value,
+        sender: details.data.payload.headers.find(header => header.name === 'From').value,
+        body: details.data.snippet,
+        // body: bodyText,
+      });
+    }
+
+    res.json(emailDetails);
+  } catch (error) {
+    console.error(`Error reading emails for ${clientId}:`, error.message);
+    res.status(500).send(`Error reading emails for ${clientId}. Check the server console for details.`);
+  }
+});
 
 // Start the server
 app.listen(port, () => {
