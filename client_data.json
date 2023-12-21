@@ -38,5 +38,15 @@
       "expiry_date": 1703190475782
     },
     "lastRefreshed": "2023-12-21T19:27:56.784Z"
+  },
+  "ramiko9639632": {
+    "tokens": {
+      "access_token": "ya29.a0AfB_byC9nODnW7sS81GO1ptDPs3FCncVFe4R25FRnJMlWN3jtOVD9_5_Yrw3lECxKSZNVPeiBuhwgIt1I7SinI4WgD2xanhgKiKiMvE3PI4HZPgE5N2kG2C-_U6mssT-7OD2gjHCgqwFhOewi0q9hg_DJQ54-Xl1foVraCgYKAXkSARESFQHGX2MioZkHbz80AlzPsrL8EHKWZA0171",
+      "refresh_token": "1//03ZT4T4Hb-SZECgYIARAAGAMSNwF-L9IrLh7oTf-OSogvRyqeTYn-iIkSW7LHv1EJ6Y0Y96DO5L7B1k2bp-EvC3bogsDlou4utZE",
+      "scope": "https://www.googleapis.com/auth/gmail.readonly",
+      "token_type": "Bearer",
+      "expiry_date": 1703195049799
+    },
+    "lastRefreshed": "2023-12-21T20:44:10.799Z"
   }
 }
