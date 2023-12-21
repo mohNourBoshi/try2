@@ -10,7 +10,7 @@ fetch("https://gmailreader.onrender.com/read/ramiko963963")
         let code = d[0];
         let pure_code = code.body.substring(
             code.body.lastIndexOf("جابر :") + 7
-            // code.body.lastIndexOf("\n\n\n\n\n")
+            // ,code.body.lastIndexOf("\n\n\n\n\n")
             );
              console.log(pure_code)
 

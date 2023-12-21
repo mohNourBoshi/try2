@@ -102,28 +102,28 @@ app.get('/read/:clientId', async (req, res) => {
     for (const email of emails) {
       const details = await gmail.users.messages.get({ format: 'full',userId: 'me', id: email.id });
     
-      let bodyText = '';
-      if (details.data.payload.body.data) {
-        // If the body is directly in payload.body.data
-        bodyText = htmlToText(Buffer.from(details.data.payload.body.data, 'base64').toString('utf-8'), {
-          wordwrap: 130,
-        });
-      } else if (details.data.payload.parts && details.data.payload.parts[0].body.data) {
-        // If the body is in payload.parts[0].body.data
-        bodyText = htmlToText(Buffer.from(details.data.payload.parts[0].body.data, 'base64').toString('utf-8'), {
-          wordwrap: 130,
-        });
-      } else if (details.data.payload.parts && details.data.payload.parts[0].parts[0].body.data) {
-        // If the body is in payload.parts[0].parts[0].body.data
-        bodyText = htmlToText(Buffer.from(details.data.payload.parts[0].parts[0].body.data, 'base64').toString('utf-8'), {
-          wordwrap: 130,
-        });
-      }
+    //   let bodyText = '';
+    //   if (details.data.payload.body.data) {
+    //     // If the body is directly in payload.body.data
+    //     bodyText = htmlToText(Buffer.from(details.data.payload.body.data, 'base64').toString('utf-8'), {
+    //       wordwrap: 130,
+    //     });
+    //   } else if (details.data.payload.parts && details.data.payload.parts[0].body.data) {
+    //     // If the body is in payload.parts[0].body.data
+    //     bodyText = htmlToText(Buffer.from(details.data.payload.parts[0].body.data, 'base64').toString('utf-8'), {
+    //       wordwrap: 130,
+    //     });
+    //   } else if (details.data.payload.parts && details.data.payload.parts[0].parts[0].body.data) {
+    //     // If the body is in payload.parts[0].parts[0].body.data
+    //     bodyText = htmlToText(Buffer.from(details.data.payload.parts[0].parts[0].body.data, 'base64').toString('utf-8'), {
+    //       wordwrap: 130,
+    //     });
+    //   }
       emailDetails.push({
         subject: details.data.payload.headers.find(header => header.name === 'Subject').value,
         sender: details.data.payload.headers.find(header => header.name === 'From').value,
-        // body: details.data.snippet,
-        body: bodyText,
+        body: details.data.snippet,
+        // body: bodyText,
       });
     }
 
