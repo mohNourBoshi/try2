@@ -1,0 +1,47 @@
+// ==UserScript==
+// @name         New Userscript
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://www.gateway2jordan.gov.jo/travelcars/
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=gov.jo
+// @grant        none
+// ==/UserScript==
+
+(function() {
+  'use strict';
+
+        setTimeout(() => {
+
+  var d;
+  if (document.querySelector("#txtSMSCode")) {
+fetch("https://gmailreadv2.onrender.com/read/ryad")
+.then((response) => response.json())
+.then((data) => {
+  d = data;
+  return d;
+})
+.then((data) => {
+
+      let code = d[0];
+      let pure_code = code.body.substring(
+          code.body.lastIndexOf("جابر :") + 7
+          // ,code.body.lastIndexOf("\n\n\n\n\n")
+          );
+           console.log(pure_code)
+
+
+          document.querySelector("#txtSMSCode").value = pure_code;
+
+          document.querySelector("#SubmitInvest").click();
+
+        })
+        .catch((error) => console.error("Error:", error));
+        
+      }
+}, 1000);
+
+
+  // Your code here...
+})();
