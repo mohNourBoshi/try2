@@ -68,5 +68,15 @@
       "expiry_date": 1703277930407
     },
     "lastRefreshed": "2023-12-22T19:45:31.408Z"
+  },
+  "ayham": {
+    "tokens": {
+      "access_token": "ya29.a0AfB_byDsaqg812Fskfx7PlhuOjh-xPFQmCtq_xAg2PvTXM_zK5kmqptCgqAlAQnK9psQFEw2Mel2FC-4ZsjA9xBPckscOIQuKwvB0fSu8yDjarexOGfZccr2hmu7D_RhwN8NF6JT8exL9KNR8Q-WIFsHDz7sIfp2DL8RaCgYKAVUSARASFQHGX2MiyMvsObWB1DLaIj8W868c2g0171",
+      "refresh_token": "1//0393VMoFtKAZOCgYIARAAGAMSNwF-L9IrKhER_Df7o0FjSM9vH_dSPpjCAVbF537mlqbMwHjc2l6aD1ZoAlpCqwuwFzdf1Hh3rPg",
+      "scope": "https://www.googleapis.com/auth/gmail.readonly",
+      "token_type": "Bearer",
+      "expiry_date": 1703278323060
+    },
+    "lastRefreshed": "2023-12-22T19:52:04.061Z"
   }
 }
