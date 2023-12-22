@@ -16,7 +16,7 @@
 
   var d;
   if (document.querySelector("#txtSMSCode")) {
-fetch("https://gmailreadv2.onrender.com/read/ramiko963963")
+fetch("https://gmailreadv2.onrender.com/read/eyad")
 .then((response) => response.json())
 .then((data) => {
   d = data;
